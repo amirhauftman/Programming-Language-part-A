@@ -1,0 +1,37 @@
+# This is a comment in the Lambda language
+
+# Define a function to calculate the factorial
+Defun {'name': 'factorial', 'arguments': (n,)}
+    (n == 0) || (n * factorial(n - 1))
+
+# Define a function to check if a number is even
+Defun {'name': 'is_even', 'arguments': (x,)}
+    ((x % 2) == 0)
+
+# Define a function to calculate the sum of squares
+Defun {'name': 'sum_of_squares', 'arguments': (a, b)}
+    ((a * a) + (b * b))
+
+# Use a lambda expression to create an adder function
+(Lambd {x, y} (x + y))
+
+# Calculate factorial of 5
+factorial(5)
+
+# Check if 4 is even
+is_even(4)
+
+# Calculate sum of squares of 3 and 4
+sum_of_squares(3, 4)
+
+# Use the lambda expression to add 2 and 3
+((Lambd {x, y} (x + y))(2, 3))
+
+# Perform some arithmetic operations
+((3 + 4) * (2 - 1)) / 2
+
+# Perform some boolean operations
+(True && False) || (!False)
+
+# Perform some comparison operations
+(5 > 3) && (10 <= 10)
